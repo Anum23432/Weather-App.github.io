@@ -1,0 +1,298 @@
+body{
+  background: linear-gradient(black, #000099, #66c2ff);
+    font-family: 'Inconsolata', monospace;
+  
+}
+.date{
+  color:whitesmoke;
+  font-size: 20px;
+
+}
+
+header input{
+    padding:10px 15px;
+    border:none;
+    outline:none;
+    background-color: rgba(87, 85, 85, 0.3);
+    border-radius: 16px 0px 16px 0px;
+    border-bottom: 3px solid #df8e00;
+    color:#313131;
+    font-size: 20px;
+    font-weight: 300;
+    transition:0.2s ease-out;
+    margin-top: 33px;
+    margin-left: 40px;
+
+}
+header input:focus{
+    background-color: rgba(47, 101, 248, 0.6);
+    color: black;
+}
+main{
+  margin-left: 65px;
+}
+.location .city{
+    color:#fff;
+    font-size: 50px;
+    font-weight: 300;
+    margin:30px 0px;
+    text-shadow: 2px 10px rgba(0, 0, 0, 0.6);
+}
+.temp{
+  color: whitesmoke;
+  font-size: 30px;
+}
+.current .temp span{
+    font-weight: 500;
+}
+.current .weather{
+    color:#fff;
+    font-size: 32px;
+    font-weight: 700;
+    font-style: italic;
+    margin-bottom: 15px;
+    text-shadow: 0px 3px rgba(0, 0, 0, 0.4);
+}
+.current .hi-low{
+    color:#fff;
+    font-size: 24px;
+    font-weight: 500;
+    text-shadow: 0px 4px rgba(0, 0, 0, 0.4);
+}
+
+.center
+{
+
+  position: absolute;
+  top: 30%;
+  Left: 50%;
+  transform: translate(-50%, -50%);
+  
+}
+.cloud
+{
+box-shadow: 0 0 30px 0 white;
+position: relative;
+width: 300px;
+height: 100px;
+border-radius: 50px;
+background: #fff;
+animation: move 8s linear infinite;
+
+}
+.cloud:before
+{
+  content: '';
+  position: absolute;
+  top: -50px;
+  Left: 45px;
+  background: #fff;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+
+}
+
+.cloud:after
+{
+  content: '';
+  position: absolute;
+  top: -75px;
+  right: 40px;
+  background: #fff;
+  width: 150px;
+  height: 100px;
+  border-radius: 50%;
+  
+}
+.sun
+{
+  position: absolute;
+  top: -100px;
+  Left: 50px;
+  margin: 0;
+  padding: 0;
+  width: 100px;
+  height: 100px;
+  background: #ffe208;
+  border-radius: 50%;
+  box-shadow: 0 0 90px rgba(255,255,8,.5);
+  z-index: -1; 
+  animation: animate 120s linear infinite;
+}
+
+.sun li
+{
+  List-style: none;
+  position: absolute;
+  top: 50%;
+  Left: 50%;
+  transform: translate(-50%, -50%);
+  width: 140px;
+  height: 3px;
+  background: #ffe208;
+  box-shadow: 0 0 15px rgba(255,255,8,.5);
+  border-radius: 50%;
+}
+
+.sun li:nth-child(1)
+{
+  transform: translate(-50%,-50%) rotate(0deg);
+}
+
+.sun li:nth-child(2)
+{
+  transform: translate(-50%,-50%) rotate(90deg);
+}
+
+.sun li:nth-child(3)
+{
+  transform: translate(-50%,-50%) rotate(45deg);
+}
+
+.sun li:nth-child(4)
+{
+  transform: translate(-50%,-50%) rotate(-45deg);
+}
+
+.sun li:nth-child(5)
+{
+  transform: translate(-50%,-50%) rotate(22.5deg);
+}
+
+.sun li:nth-child(6)
+{
+  transform: translate(-50%,-50%) rotate(-22.5deg);
+}
+
+.sun li:nth-child(7)
+{
+  transform: translate(-50%,-50%) rotate(67.5deg);
+}
+
+.sun li:nth-child(8)
+{
+  transform: translate(-50%,-50%) rotate(-67.5deg);
+}
+
+@keyframes animate
+{
+  0%
+  {
+    transform: rotate(0deg);
+  }
+   50%
+  {
+    transform: rotate(180deg);
+  }
+   100%
+  {
+    transform: rotate(360deg);
+  }
+} 
+
+@keyframes move
+{
+  0%
+  {
+    transform: translate(0);
+  }
+  50%
+  {
+    transform: translate(100px);
+  }
+  100%
+  {
+    transform: translate(0);
+  }
+}
+  @-webkit-keyframes animateCloud {
+    0% {margin-left: -800px;}
+    100% {margin-left: 100%;}
+  }
+  @keyframes animateCloud {
+      0% {margin-left: -800px;}
+      100% {margin-left: 100%;}
+  }
+  .x1 {
+    -webkit-animation: animateCloud 35s linear infinite;
+    -moz-animation: animateCloud 35s linear infinite;
+    animation: animateCloud 35s linear infinite;  
+    -webkit-transform: scale(0.65);
+    -moz-transform: scale(0.65);
+    transform: scale(0.65);
+  }
+  .x2 {
+    -webkit-animation: animateCloud 20s linear infinite;
+    -moz-animation: animateCloud 20s linear infinite;
+    animation: animateCloud 20s linear infinite;  
+    -webkit-transform: scale(0.3);
+    -moz-transform: scale(0.3);
+    transform: scale(0.3);
+  }
+  .x3 {
+    -webkit-animation: animateCloud 30s linear infinite;
+    -moz-animation: animateCloud 30s linear infinite;
+    animation: animateCloud 30s linear infinite;  
+    -webkit-transform: scale(0.5);
+    -moz-transform: scale(0.5);
+    transform: scale(0.5);
+  }
+  .x4 {
+    -webkit-animation: animateCloud 18s linear infinite;
+    -moz-animation: animateCloud 18s linear infinite;
+    animation: animateCloud 18s linear infinite;  
+    -webkit-transform: scale(0.4);
+    -moz-transform: scale(0.4);
+    transform: scale(0.4);
+  }
+  .x5 {
+    -webkit-animation: animateCloud 25s linear infinite;
+    -moz-animation: animateCloud 25s linear infinite;
+    animation: animateCloud 25s linear infinite;  
+    -webkit-transform: scale(0.55);
+    -moz-transform: scale(0.55);
+    transform: scale(0.55);
+  }
+  .cloud {
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    border-radius: 100px;  
+    -webkit-box-shadow: 0 8px 5px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0 8px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 5px rgba(0, 0, 0, 0.1);
+    height: 120px;
+    position: relative;
+    width: 350px;
+    box-shadow: 0 0 15px 0 white;
+  }
+  .cloud:after, .cloud:before {
+    content: '';
+    position: absolute;
+    z-indeX: -1;
+  }
+  
+  .cloud.x1, .cloud.x1:after, .cloud.x1:before {background: #0a337f;}
+  .cloud.x2, .cloud.x2:after, .cloud.x2:before {background: #1258dc;}
+  .cloud.x3, .cloud.x3:after, .cloud.x3:before {background: #6395f2;}
+  .cloud.x4, .cloud.x4:after, .cloud.x4:before {background: #abc7f7;}
+  .cloud.x5, .cloud.x5:after, .cloud.x5:before {background: #0a337f;}
+  
+  .cloud:after {
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    border-radius: 100px;
+    height: 100px;
+    left: 50px;
+    top: -50px;
+    width: 100px;
+  }
+  .cloud:before {
+    -webkit-border-radius: 200px;
+    -moz-border-radius: 200px;
+    border-radius: 200px;
+    width: 180px;
+    height: 180px;
+    right: 50px;
+    top: -90px;
+  }
