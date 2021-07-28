@@ -16,5 +16,8 @@
 - Write any place name in input to check weather. 
 - All the data about weather update will be appeared.
 
+## Repo link
+-https://github.com/Anum23432/Weather-App.github.io
+
 ## Live link
 -https://anum23432.github.io/Weather-App.github.io/
